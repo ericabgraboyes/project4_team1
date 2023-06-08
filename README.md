@@ -41,6 +41,12 @@ While the baseline model demonstrated decent accuracy, it is important to note t
 
 Given the sub-optimal performance of the baseline model the first modification we made was to set the built-in class_weight method to balanced (class_weight = balanced). This method adjusts the class weight inversely proportional to their respective frequencies..so that model is effectively more 'aware' of underrepresented classes.  We thought that by increasing the model's awareness of the under-represented classes it would improve the model's ability to classify both classes accurately.  As expected we saw a substantial improvement in the model's balanced accuracy and recall scores. It is important to note however that implemented balanced class_weight only resulted in a marginal improvement to the model's accuracy and precision.
 
+In addition to evaluating balanced class_weight, we also employed ADASYN (Adaptive Synthetic) sampling against the baseline model. Given the imbalanced target data we agreed that we needed to correct for the oversampling.  We decided on ADASYN because this technique generates synthetic data and adapts the dataset to focus on the data instances that are difficult to learn. Interestingly the results of the adaptive model were only marginally better than the logistic regression model with balanced class weight.
+
+It is important to note that we had not scaled any of our numeric variables in the three initial logistic regression models.  We wanted to evaluate the impact of class_weights and resampling on the data based on the original values before deciding to implement scaling. We applied scaling to the resampled data, which lead to an improvement in all metrics, with the exception of recall. This occurred because scaling standardizes the features onto a uniform scale, thereby enhancing the model's ability to learn from the data. However, it does not directly influence the model's ability to identify the positive class, hence the stagnant recall rate.
+
+Lastly, we utilized GridSearchCV for hyperparameter tuning. It used the 'liblinear' solver. This is an algorithm for small datasets and binary classification, and was likely preferred due to its efficiency with the dataset size and the problem at hand. As for the penalty parameter, the model opted for the L1 penalty, which introduces sparsity into the model, implying that it makes the coefficients of irrelevant features zero here is helping the model with feature selection. This is beneficial as it simplifies the model.
+
 #### Visualizations:
 
 ### Future Considerations:

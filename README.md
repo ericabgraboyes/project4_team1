@@ -23,11 +23,16 @@ This project's objective is to develop a machine learning model that can accurat
 - It is important to acknowledge this project used ficitous data designed for the purpose of machine learning.  Unfortunately access to real customer retention and attrition data is highly sensitive and confidential.  While we would have liked to have real world customer level data to build our machine learning model off of, this was not feasible. The project does however provide a framework for building out the features and attributes that would be valuable to consider when predicting customer churn.
 
 ### Project Implementation - Data Cleansing:
-The data_cleanse.ipynb notebook ingested the raw CSV file of bank churn customer data and used Spark to clean and transform the underlying dataset.  As part of the data cleanse process we dropped the row number, customer id and surname fields from the raw data. The cleansed data was exported to a separate csv file and used in the subsequent notebooks where we developed and optimize the machine learning models.
+We loaded the raw csv file to jupyter notbook and used Spark to clean and transform the underlying dataset.  As part of the data cleanse process we dropped the row number, customer id and surname fields from the raw data. The cleansed data was exported to a separate csv file and used in the subsequent notebooks where we developed and optimize the machine learning models.
 
-### Project Implementation - Machine Learning Develoment & Optimization:
-The data_cleanse.ipynb notebook ingested the raw CSV file of bank churn customer data and used Spark to clean and transform the underlying dataset.  As part of the data cleanse process we dropped the row number, customer id and surname fields from the raw data. The cleansed data was exported to a separate csv file and used in the subsequent notebooks where we developed and optimize the machine learning models.
+### Project Implementation - Developing a machine learning model:
+We loaded the cleansed dataset into a separate jupyter notebook (model_exploration) where we evaluated both the skewness and kurtosis of the independent variables.  We grouped the independent variables into numeric and categorical groups and encoded the categorical variables using one-hot encoding. Next we created our features (independent variables) and target (dependent) variables and used train_test_split to split the data.
 
+We used a function to train and test several different models and then analyzed the initial model results based on their accuracy score 
+
+[Insert model table and accuracy]
+
+Even though the initial model accuracy was not as impressive as other models, we wanted to use a logistic regression model to predict customer churn -- to see if we could optimize the model's performance using various machine learning techniques
 #### Visualizations:
 
 ### Future Considerations:

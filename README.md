@@ -32,7 +32,12 @@ We used a function to train and test several different models and then analyzed 
 
 [Insert model table and accuracy]
 
-Even though the initial model accuracy was not as impressive as other models, we wanted to use a logistic regression model to predict customer churn -- to see if we could optimize the model's performance using various machine learning techniques
+Even though the initial model accuracy was not as impressive as other models, we wanted to use a logistic regression model to predict customer churn -- to see if we could optimize the model's performance using various machine learning techniques.  We also aligned that given the colinearlity between exited and complain we should remove the "Complain" variable when building the regression model as the variable created quasi-causation. If the variable had captured number of complaints instead of a binary output we would have reconsidered excluding it the next phase of the project. 
+
+### Project Implementation - Optimizing and Tuning a machine learning model:
+Next we reloaded the cleansed dataset into a new notebook(final_model) and worked to optimize the logistic regression model.
+
+
 #### Visualizations:
 
 ### Future Considerations:

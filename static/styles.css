@@ -1,0 +1,107 @@
+/* Place your CSS styles in this file */
+
+        body {
+            font: 20px Calibri;
+            line-height: 1.8;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: orange;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .bg-1 {
+            background-image: linear-gradient(#a8c2bf,
+                    #96baba,
+                    #84b2b6,
+                    #71aab4,
+                    #5fa2b2,
+                    #4c99b1,
+                    #3990b1,
+                    #2586b0,
+                    #117caf,
+                    #0272ad,
+                    #0272ad);
+            color: #000000;
+            border: 10px;
+        }
+
+        .bg-2 {
+            background-image: linear-gradient(#0272ad,
+                    #117caf,
+                    #2586b0,
+                    #3990b1);
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .bg-4 {
+            background-image: linear-gradient(#006400,
+                    #006e00,
+                    #007800,
+                    #008300,
+                    #008e00,
+                    #009800,
+                    #00a300,
+                    #00ae00,
+                    #00b900,
+                    #00c500,
+                    #00d000,
+                    #00dc00,
+                    #00e700,
+                    #00f300,
+                    #00ff00);
+            color: #ffffff;
+        }
+
+        .container-fluid {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            background-color: lightgray;
+        }
+
+        .navbar {
+            background-color: lightgray;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            color: rgb(0, 0, 0);
+            margin-bottom: 0;
+            font-size: 12px;
+        }
+
+        .navbar-brand li a:hover {
+            color: orange !important;
+        }
+
+        .navbar-nav li a:hover {
+            color: orange !important;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+        .custom-btn {
+  background-color: lightgray; /* Set your desired background color */
+  color: #000000; /* Set your desired text color */
+}

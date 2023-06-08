@@ -35,8 +35,11 @@ We used a function to train and test several different models and then analyzed 
 Even though the initial model accuracy was not as impressive as other models, we wanted to use a logistic regression model to predict customer churn -- to see if we could optimize the model's performance using various machine learning techniques.  We also aligned that given the colinearlity between exited and complain we should remove the "Complain" variable when building the regression model as the variable created quasi-causation. If the variable had captured number of complaints instead of a binary output we would have reconsidered excluding it the next phase of the project. 
 
 ### Project Implementation - Optimizing and Tuning a machine learning model:
-Next we reloaded the cleansed dataset into a new notebook(final_model) and worked to optimize the logistic regression model.
+The started the machine learning model out using a simple baseline logistic regression. The baseline model did not account for resampling (in spite of the imbalanced sample) or scaling of numeric independent variables.  We felt that it was important to establish a true baseline for how the model performed, even though scaling the dependent variables and accounting for sampling bias were steps we knew ultimately needed to be taken.
 
+While the baseline model demonstrated decent accuracy, it is important to note that the model's performance dropped considerably when evaulating performance on the balanced accuracy scale. While the precision score (prediction true positives) was "tenible" the recall score of .05 was quite discouraging when considering the model's overall performance.
+
+Given the sub-optimal performance of the baseline model the first modification we made was to set the built-in class_weight method to balanced (class_weight = balanced). This method adjusts the class weight inversely proportional to their respective frequencies..so that model is effectively more 'aware' of underrepresented classes.  We thought that by increasing the model's awareness of the under-represented classes it would improve the model's ability to classify both classes accurately.  As expected we saw a substantial improvement in the model's balanced accuracy and recall scores. It is important to note however that implemented balanced class_weight only resulted in a marginal improvement to the model's accuracy and precision.
 
 #### Visualizations:
 

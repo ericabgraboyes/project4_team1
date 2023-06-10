@@ -71,7 +71,7 @@ In parallel to our logistic regression models we also built a Tensorflow model u
 
 After running Keras Tuner, the best model was chosen and the data was fit and trained. The end results were acceptable, but not as good as hoped. The accuracy was lower than expected and dips throughout the fit process made us consider other options.
 
-### Project Conclusion & Future Considerations:
+### Project Conclusion:
 Within this project onclusion starter: In this project, we've successfully leveraged the power of predictive modelling using the bank churn dataset. By iteratively refining a logistic regression model, we can effectively predict if a customer will leave the bank based on various features.
 This model serves a dual purpose. Firstly, it can identify potential churn candidates early, enabling proactive intervention through targeted marketing or personalized service. Secondly, the model's interpretability assists strategic planning, helping pinpoint areas for improvement. For instance,  as the 'number of products' strongly predicts churn, the bank could strategize to engage customers with a wider range of services.
 The model developed not only meets performance benchmarks but also provides valuable insights, shaping customer retention efforts and bolstering the bank's market position, underscoring the immense value of data analytics in banking.

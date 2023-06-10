@@ -1,7 +1,7 @@
 ## Predicting - Customer Churn
 
 ### Project Overview:
-This project's objective is to develop a machine learning model that can accurately predict if a customer will leave their bank. The concept of customer turnover or churn is integral to businesses as the cost of acquiring new customers is typically higher than the cost of retaining existing customers.  We thought it would be interesting to understand what drives customer churn or turnover.  That is to say are there certain demographics or characteristics in which a higher proportion of customers exited the bank vs. stayed.  When training the model to predict customer turnover or churn, the project considered factors such as age, credit score, gender... [INSERT FACTORS BASED ON FEATURE IMPORTANCE]. Ultimately if banks understood what variables drove customers to leave they could not only implement measures to mitigate churn but also identify attributes that are important when implementing customer loyalty programs. 
+This project's objective is to develop a machine learning model that can accurately predict if a customer will leave their bank. The concept of customer turnover or churn is integral to businesses as the cost of acquiring new customers is typically higher than the cost of retaining existing customers.  We thought it would be interesting to understand what drives customer churn or turnover.  That is to say are there certain demographics or characteristics in which a higher proportion of customers exited the bank vs. stayed.  When training the model to predict customer turnover or churn, the project considered factors including the number of bank products, age, credit card type, member active status, and country. Ultimately if banks understood what variables drove customers to leave they could not only implement measures to mitigate churn but also identify attributes that are important when implementing customer loyalty programs. 
 
 #### Key Questions to Consider:
 - Can we accurately predict if a customer will leave? 
@@ -26,7 +26,7 @@ This project's objective is to develop a machine learning model that can accurat
 Prior to building our model to predict customer churn, we used Tableau to visualize our data as part of our exploratory data analysis.  
 
   <br>
-    <img src="https://github.com/ericabgraboyes/project4_team1/blob/main/Resources/Images/logistic_regression_model_optimization.png" alt="Improved model performance">
+    <img src="https://github.com/ericabgraboyes/project4_team1/blob/main/Resources/Images/summary_visualizations_1.png" alt="Summary visualizations">
 
 We noticed the distribution by card type was very uniform within each of the 3 countries in our dataset.  We also noticed that the distribution between average estimated salary and credit score was also relatively uniform which we had not expected.  While we found that the distribution of characteristics was relatively uniform we noticed that the "peak" for customers leaving a bank occured as customers transitioned into their late 30s, mid 40s.. and that younger customers leaned more strongly towards "staying".   
 

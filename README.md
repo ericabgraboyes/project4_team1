@@ -23,6 +23,12 @@ This project's objective is to develop a machine learning model that can accurat
 - It is important to acknowledge this project used ficitous data designed for the purpose of machine learning.  Unfortunately access to real customer retention and attrition data is highly sensitive and confidential.  While we would have liked to have real world customer level data to build our machine learning model off of, this was not feasible. The project does however provide a framework for building out the features and attributes that would be valuable to consider when predicting customer churn.
 
 ### Visualizations ###
+Prior to building our model to predict customer churn, we used Tableau to visualize our data as part of our exploratory data analysis.  
+
+  <br>
+    <img src="https://github.com/ericabgraboyes/project4_team1/blob/main/Resources/Images/logistic_regression_model_optimization.png" alt="Improved model performance">
+
+We noticed the distribution by card type was very uniform within each of the 3 countries in our dataset.  We also noticed that the distribution between average estimated salary and credit score was also relatively uniform which we had not expected.  While we found that the distribution of characteristics was relatively uniform we noticed that the "peak" for customers leaving a bank occured as customers transitioned into their late 30s, mid 40s.. and that younger customers leaned more strongly towards "staying".   
 
 ### Project Implementation - Data Cleansing:
 We loaded the raw csv file to jupyter notbook and used Spark to clean and transform the underlying dataset.  As part of the data cleanse process we dropped the row number, customer id and surname fields from the raw data. The cleansed data was exported to a separate csv file and used in the subsequent notebooks where we developed and optimize the machine learning models.

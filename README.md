@@ -45,9 +45,8 @@ Even though the initial model accuracy was not as impressive as other models, we
 
 ### Project Implementation - Optimizing and Tuning Machine learning model:
   <br>
-    <img src="https://github.com/ericabgraboyes/project4_team1/blob/main/Resources/Images/logistic_regression_model_optimization.png" alt="Bonus: Gauge Chart">
-  
-  
+    <img src="https://github.com/ericabgraboyes/project4_team1/blob/main/Resources/Images/logistic_regression_model_optimization.png" alt="Improved model performance">
+
 We started wth a simple baseline logistic regression. The baseline model did not account for resampling (in spite of the imbalanced sample) or standard scaling.  We felt it was important to establish a baseline for model performance, understanding that we would ultimately layer on additional considerations for standard scaling and sampling bias.  While the baseline model demonstrated decent accuracy, the balanced accuracy score dropped considerably. While the precision score (prediction true positives) was "tenible" the recall score of .05 was quite discouraging when considering the model's overall performance.
 
 Given the sub-optimal performance of the baseline model we set built-in class_weight method to balanced (class_weight = balanced). This method adjusts the class weight inversely proportional to their respective frequencies..so that model is effectively more 'aware' of underrepresented classes.  We thought that by increasing the model's awareness of the under-represented classes it would improve the model's ability to classify both classes accurately.  As expected we saw a substantial improvement in the model's balanced accuracy and recall scores. It is important to note however that implemented balanced class_weight only resulted in a marginal improvement to the model's accuracy and precision.
@@ -57,6 +56,9 @@ In addition to evaluating balanced class_weight, we also employed ADASYN (Adapti
 It is important to note that we had not scaled any of our numeric variables in the three initial logistic regression models.  We wanted to evaluate the impact of class_weights and resampling on the data based on the original values before deciding to implement scaling. We applied scaling to the resampled data, which lead to an improvement in all metrics, with the exception of recall. This occurred because scaling standardizes the features onto a uniform scale, thereby enhancing the model's ability to learn from the data. However, it does not directly influence the model's ability to identify the positive class, hence the stagnant recall rate.
 
 Lastly, we utilized GridSearchCV for hyperparameter tuning. It used the 'liblinear' solver. This is an algorithm for small datasets and binary classification, and was likely preferred due to its efficiency with the dataset size and the problem at hand. As for the penalty parameter, the model opted for the L1 penalty, which introduces sparsity into the model, implying that it makes the coefficients of irrelevant features zero here is helping the model with feature selection. This is beneficial as it simplifies the model.
+
+ <br>
+ <img src="https://github.com/ericabgraboyes/project4_team1/blob/main/Resources/Images/features.JPG" alt="Improved model performance">
    
 ### Project Implementation - Part 2: Keras and TensorFlow:
 In parallel to our logistic regression models we also built a Tensorflow model using Keras.  It is important to note that while the dataset has several categorical variables, we did not need to bin them before one hot encoding since there were only a few categorical variables within each variable. 

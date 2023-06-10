@@ -1,7 +1,7 @@
 ## Predicting - Customer Churn
 
 ### Project Overview:
-This project's objective is to develop a machine learning model that can accurately predict if a customer will leave their bank. The concept of customer turnover or churn is paramount to most businesses as the cost of acquiring new customers is typically higher than the cost of retaining existing customers.  We thought it would be interesting to understand what drives customer churn or turnover.  That is to say are there certain demographics or characteristics in which a higher proportion of customers exited the bank vs. stayed.  When training the model to predict customer turnover or churn, the project considered factors such as age, credit score, gender... [INSERT FACTORS BASED ON FEATURE IMPORTANCE]. Ultimately if banks understood what variables drove customers to leave they could not only implement measures to mitigate churn but also identify attributes that are important when implementing customer loyalty programs. 
+This project's objective is to develop a machine learning model that can accurately predict if a customer will leave their bank. The concept of customer turnover or churn is integral to businesses as the cost of acquiring new customers is typically higher than the cost of retaining existing customers.  We thought it would be interesting to understand what drives customer churn or turnover.  That is to say are there certain demographics or characteristics in which a higher proportion of customers exited the bank vs. stayed.  When training the model to predict customer turnover or churn, the project considered factors such as age, credit score, gender... [INSERT FACTORS BASED ON FEATURE IMPORTANCE]. Ultimately if banks understood what variables drove customers to leave they could not only implement measures to mitigate churn but also identify attributes that are important when implementing customer loyalty programs. 
 
 #### Key Questions to Consider:
 - Can we accurately predict if a customer will leave? 
@@ -26,12 +26,20 @@ This project's objective is to develop a machine learning model that can accurat
 
 ### Project Implementation - Data Cleansing:
 We loaded the raw csv file to jupyter notbook and used Spark to clean and transform the underlying dataset.  As part of the data cleanse process we dropped the row number, customer id and surname fields from the raw data. The cleansed data was exported to a separate csv file and used in the subsequent notebooks where we developed and optimize the machine learning models.
+
 ### Project Implementation - Developing a machine learning model:
 We loaded the cleansed dataset into a separate jupyter notebook (model_exploration) where we evaluated both the skewness and kurtosis of the independent variables.  We grouped the independent variables into numeric and categorical groups and encoded the categorical variables using one-hot encoding. Next we created our features (independent variables) and target (dependent) variables and used train_test_split to split the data.
 
-We used a function to train and test several different models and then analyzed the initial model results based on their accuracy score 
+We used a function to train and test several different models and then analyzed the initial model results based on their accuracy scores 
 
-[Insert model table and accuracy]
+|  Exploratory Model          | Accuracy Score |
+| ------------------ | -------------- |
+|    Extreme Graadient Boost  |  0.999 |
+|    Light Gradient Boost     |  0.999  |
+|    Random Forest            |  0.999  |
+|    Logistic Regression      |  0.799  |
+|    KNeighbors               |  0.765  |
+
 
 Even though the initial model accuracy was not as impressive as other models, we decided to use a logistic regression model to predict customer churn -- to see if we could optimize the model's performance using various machine learning techniques.  We also aligned that given the colinearlity between exited and complain we should remove the "Complain" variable when building the regression model as the variable created quasi-causation. If the variable had captured number of complaints instead of a binary output we would have reconsidered excluding it the next phase of the project. 
 ### Project Implementation - Optimizing and Tuning Machine learning model:

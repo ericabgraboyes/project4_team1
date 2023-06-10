@@ -10,13 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#expand-btn').click(function () {
-                $('#more-info').collapse('toggle');
-            });
-        });
-    </script>
 
 </head>
 
@@ -42,8 +35,8 @@
                     <li><a href="https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn"
                             target="_blank">Dataset link</a></li>
                     <li><a href="Resources/banking-churn.html" target="_blank">Data Cleaning Notebook</a></li>
-                    <li><a href="Resources/model_exploration.html" target="_blank">Model Exploration</a></li>
                     <li><a href="Resources/Bank_Customer_Churn_Keras.html" target="_blank">Keras Model</a></li>
+                    <li><a href="Resources/model_exploration.html" target="_blank">Model Exploration</a></li>
                     <li><a href="Resources/final_model.html" target="_blank">Final Model</a></li>
                     <li><a href="https://public.tableau.com/views/DataSummarization/PresentationDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
                             target="_blank">Tableau Visuals</a></li>
@@ -57,78 +50,46 @@
     <!-- First Container -->
     <div class="container-fluid bg-1 text-center">
         <h1 class="margin">Predicting Customer Churn at European Banks:</h1><br>
-        <h3>This project's objective is to develop a machine learning model that can accurately predict if a customer will leave their bank. The concept of customer turnover or churn is paramount to most businesses as the cost of acquiring new customers is typically higher than the cost of retaining existing customers.  We thought it would be interesting to understand what drives customer churn or turnover.  That is to say are there certain demographics or characteristics in which a higher proportion of customers exited the bank vs. stayed.  When training the model to predict customer turnover or churn, the project considered factors such as age, credit score, gender... [INSERT FACTORS BASED ON FEATURE IMPORTANCE]. Ultimately if banks understood what variables drove customers to leave they could not only implement measures to mitigate churn but also identify attributes that are important when implementing customer loyalty programs.</h3>
+        <h3>This project's objective is to develop a machine learning model that can accurately predict if a customer will leave their bank. 
+            The concept of customer turnover or churn is integral to businesses as the cost of acquiring new customers 
+            is typically higher than the cost of retaining existing customers.  We thought it would be interesting to understand what drives customer churn or turnover.  
+            That is to say are there certain demographics or characteristics in which a higher proportion of customers exited the bank vs. stayed.  When training the model to predict customer turnover or churn, 
+            the project considered factors including the number of bank products, age, credit card type, member active status, and country. 
+            Ultimately if banks understood what variables drove customers to leave they could not only implement measures to mitigate churn but also identify attributes 
+            that are important when implementing customer loyalty programs. </h3>
         <br>
-        <img src="https://media.istockphoto.com/id/1194242628/vector/business-people-clients-and-bank-staff-on-workplace-bank-managers-and-customers-characters.jpg?s=612x612&w=0&k=20&c=gSQgpGabj1KmPXAI0x0Hf4yGVUyP8ARwuRDPjROXLp0="
-            class="img-responsive img-rectangle margin" style="display:inline" alt="Bank" width="700" height="700">
 
+        <img src="https://media.istockphoto.com/id/1194242628/vector/business-people-clients-and-bank-staff-on-workplace-bank-managers-and-customers-characters.jpg?s=612x612&w=0&k=20&c=gSQgpGabj1KmPXAI0x0Hf4yGVUyP8ARwuRDPjROXLp0="
+            class="img-responsive img-rectangle margin" style="display:inline" alt="Bank" width="900" height="700">
+            <p style="font-size: 13px;color: rgb(255, 255, 255);margin-left:auto;">Image source: iStockphoto</p>
     </div>
     <!-- Second Container -->
     <div class="container-fluid bg-2">
 
         <h1 class="margin">What was our approach?</h1>
         <p>We took a comprehensive approach to analyze European bank customer churn data and predict the likelihood of
-            customers leaving the bank. Using SQL, Spark, and Scikit-learn, we performed data analysis and modeling
+            customers leaving the bank. Using Spark, Pandas, and Scikit-learn, we performed data analysis and modeling
             tasks.</p>
-        <p>We started by extracting the relevant data using SQL and We performed data cleaning and preprocessing tasks
+        <p>We started by extracting the relevant data using Spark and We performed data cleaning and preprocessing tasks
             with pandas to ensure the data was in a suitable format for analysis.</p>
         <p>To predict customer churn, we utilized Scikit-learn, which offers a wide range of machine learning
-            algorithms. We trained and evaluated several classification models such as LogisticRegression,
-            KNeighborsClassifier, and RandomForestClassifier. We followed best practices by validating the models using
-            appropriate techniques and evaluating metrics like accuracy.</p>
-        <p>Overall, our approach involved using SQL, Spark, and Scikit-learn to analyze the European bank customer churn
+            algorithms. We trained and evaluated several classification models such as Logistic regression,
+            Logistic regression model with ADASYN resampling, and Logistic regression model with ADASYN resampling and StandardScaler. We followed best practices by validating the models using
+            appropriate techniques and evaluating metrics like accuracy, balanced accuracy, precision, recall, and f1 score.</p>
+        <p>Overall, our approach involved using Spark, Pandas, and Scikit-learn to analyze the European bank customer churn
             data. By leveraging these tools, we aimed to gain insights into customer behavior and develop an accurate
             prediction model.</p>
-        <button id="expand-btn" class="btn btn-primary custom-btn">Summary</button>
-        <div id="more-info" class="collapse" class="text-left">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <p>Summary:</p>
-                    <ul>
-                        <li>We performed an analysis on European bank customer churn information to understand and
-                            predict the likelihood of a customer leaving a bank</li>
-                    </ul>
-                    <p>Data:</p>
-                    <ul>
-                        <li><a href="https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn?resource=download"
-                                target="_blank">https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn?resource=download</a>
-                        </li>
-                    </ul>
-                    <p>ML:</p>
-                    <ul>
-                        <li>Target</li>
-                        <li>Labels</li>
-                        <li>Dependent</li>
-                        <li>Classification/Regression</li>
-                        <li>Classification</li>
-                    </ul>
-                    <p>Metric to evaluate model:</p>
-                    <ul>
-                        <li>Accuracy</li>
-                        <li>Performance?</li>
-                    </ul>
-                    <p>Tools to transform/prepare data:</p>
-                    <ul>
-                        <li>Spark</li>
-                        <li>Scikit-learn</li>
-                        <li>Python Pandas</li>
-                    </ul>
-                    <p>Tools to visualize results:</p>
-                    <ul>
-                        <li>Tableau</li>
-                        <li>Python Pandas</li>
-                    </ul>
-                    <p>Division of work:</p>
-                    <ul>
-                        <li>Lacey - Modeling/Optimization</li>
-                        <li>Kevin - Modeling/Optimization</li>
-                        <li>Erica - Modeling/Optimization</li>
-                        <li>Chris - Transformations/Web page/Data Cleansing (Jason recommends doing this step in SQL or Spark)</li>
-                        <li>Dan - Tableau visualizations of data</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <br>
+        <br>
+        <p style="color: rgb(0, 0, 0);font-weight: bold;font-size: large;">    Key Questions to Consider:<br>
+        -   Can we accurately predict if a customer will leave? <br>
+        -   What factors have the greatest importance in determining if a customer will leave?<br>
+        -   Is there a certain age group or demographic that is more likely to exit?<br>
+        -   How does where a person live impact churn? Do factors that predict customer churn differ by country?<br>
+        -   How does a customer's credit score influence their decision to leave?
+        <p>
+
+
     </div>
     </div>
 
@@ -136,53 +97,81 @@
     <div class="container-fluid bg-3 text-center">
         <h3 class="margin">What we found!</h3><br>
         <div class="row">
-            <img src="Resources/features.JPG" class="img-responsive img-rectangle margin" style="display:inline" alt="Bank" width="700" height="700">
-            <img src="Resources/card_type.JPG" class="img-responsive img-rectangle margin" style="display:inline" alt="Bank" width="700" height="700">
-            <img src="Resources/salary.JPG" class="img-responsive img-rectangle margin" style="display:inline" alt="Bank" width="700" height="700">
-            <img src="Resources/tenure.JPG" class="img-responsive img-rectangle margin" style="display:inline" alt="Bank" width="700" height="700">
-            <img src="Resources/creditscore.JPG" class="img-responsive img-rectangle margin" style="display:inline" alt="Bank" width="700" height="700">
-
-        </div>
-    </div>
-    <!-- Fourth Container (Grid) -->
-    <div class="container-fluid bg-3 text-center">
-        <h3 class="margin">Links to our content</h3><br>
+            <h3>Tableau visualizations</h3>
+            <img src="Resources/Images/card_type.jpg" class="img-responsive img-rectangle margin" style="display:inline"
+                alt="Bank" width="850" height="850">
+            <img src="Resources/Images/salary.jpg" class="img-responsive img-rectangle margin" style="display:inline"
+                alt="Bank" width="780" height="780">
+        </div><br>
         <div class="row">
-            <div class="col-sm-4">
-                <li><a href="https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn?resource=download"
-                        target="_blank">Link to our Dataset</a></li>
-            </div>
-            <div class="col-sm-4">
-                <li><a href="Resources/banking-churn.html" target="_blank">Data Cleaning Notebook</a></li>
-            </div>
-            <div class="col-sm-4">
-                <li><a href="Resources/model_exploration.html" target="_blank">Our Model Exploration</a></li>
-            </div>
+            <img src="Resources/Images/tenure.jpg" class="img-responsive img-rectangle margin" style="display:inline"
+                alt="Bank" width="1800" height="800">
+        </div><br>
+        <div class="row">
+            <img src="Resources/Images/creditscore.jpg" class="img-responsive img-rectangle margin"
+                style="display:inline" alt="Bank" width="850" height="850">
+            <img src="Resources/Images/Average.jpg" class="img-responsive img-rectangle margin" style="display:inline"
+                alt="Bank" width="850" height="850">
+            <div></br></br>
+                <h3>Keras Model</h3>
+                <img src="Resources/Images/keras_plots.png" class="img-responsive img-rectangle margin"
+                    style="display:inline" alt="Bank" width="1800" height="800">
+            </div><br>
+            <div class="row">
+                <img src="Resources/Images/Model.png" class="img-responsive img-rectangle margin" style="display:inline"
+                    alt="Bank" width="850" height="850">
 
-            <div class="col-sm-4">
-            <li><a href="Resources/Bank_Customer_Churn_Keras.html" target="_blank">Keras Model</a></li>
-        </div>
+                <div></br></br>
+                </div class="row">
+                <h3>Final Model Metrics</h3>
+                <img src="Resources/Images/logistic_regression_model_optimization.png"
+                    class="img-responsive img-rectangle margin" style="display:inline" alt="Bank" width="1200"
+                    height="700">
+                <div></br></br>
+                </div class="row">
+                <h3>Final Model Features</h3>
+                <img src="Resources/Images/features.jpg" class="img-responsive img-rectangle margin"
+                    style="display:inline" alt="Bank" width="850" height="850">
+                <div>
 
-            <div class="col-sm-4">
-                <li><a href="Resources/final_model.html" target="_blank">Our Final Model</a></li>
-            </div>
-            <div class="col-sm-4">
-                <li><a href="https://public.tableau.com/views/DataSummarization/PresentationDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
-                        target="_blank">Tableau Visuals</a></li>
-            </div>
-            <div class="col-sm-4">
-                <li><a href="Resources/team.html" target="_blank">Farewell Message</a></li>
-            </div>
+                </div>
+                <!-- Fourth Container (Grid) -->
+                <div class="container-fluid bg-3 text-center">
+                    <h3 class="margin">Links to our content</h3><br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <li><a href="https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn?resource=download"
+                                    target="_blank">Link to our Dataset</a></li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li><a href="Resources/banking-churn.html" target="_blank">Data Cleaning Notebook</a></li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li><a href="Resources/Bank_Customer_Churn.html" target="_blank">Keras Model</a></li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li><a href="Resources/model_exploration.html" target="_blank">Our Model Exploration</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li><a href="Resources/final_model.html" target="_blank">Our Final Model</a></li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li><a href="https://public.tableau.com/views/DataSummarization/PresentationDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
+                                    target="_blank">Tableau Visuals</a></li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li><a href="Resources/team.html" target="_blank">Farewell Message</a></li>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <footer class="container-fluid bg-4 text-center">
+                    <p>Webpage cooked up by "Chef"</br>With a little help from <a href="https://www.w3schools.com/" target="_blank" class="button">w3schools</a><br> and <a href="https://chat.openai.com/"
+                            target="_blank" class="button">
+                            ChatGPT</a></p>
 
-        </div>
-    </div>
-    <!-- Footer -->
-    <footer class="container-fluid bg-4 text-center">
-        <p>Cooked up by "Chef"</br>With a little help from w3schools<a href="https://www.w3schools.com/" target="_blank"
-                class="button">
-                https://www.w3schools.com/</a></p>
-        
-    </footer>
+                </footer>
 </body>
 
 </html>
